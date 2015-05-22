@@ -1,0 +1,13 @@
+<template name='modal'>
+  <div data-modal class='modal'>
+    <div class='modal-content'>
+      <h4>There are multiple possible addresses.</h4>
+      <p>Please choose the closest match.</p>
+      {{#each addresses}}
+        <p>
+          <button class='btn-flat modal-action modal-close waves-effect waves-light orange'>{{address}}</button>
+        </p>
+      {{/each}}
+    </div>
+  </div>
+</template>

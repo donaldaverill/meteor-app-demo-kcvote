@@ -1,0 +1,53 @@
+html {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.mapContainer {
+  width: 100%;
+  height: 100%;
+}
+div[controlPanel] {
+  z-index: 100;
+  position: absolute;
+  background: none;
+  bottom: 0;
+  left: 0;
+  padding: 0 15px 0;
+  margin-bottom: 0;
+  width: inherit;
+}
+div[controlPanel] .card {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+/*csslint ids: false*/
+
+#map {
+  width: 100%;
+  height: 100%
+}
+#map .container {
+  max-width: none;
+}
+/*csslint ids: true*/
+/* label color */
+
+.input-field label {
+  color: orange;
+}
+/* label focus color */
+
+.input-field input[type=text]:focus + label {
+  color: orange;
+}
+/* label underline focus color */
+
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid orange;
+  box-shadow: 0 1px 0 0 orange;
+}
