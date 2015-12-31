@@ -25,7 +25,6 @@ div[controlPanel] .card {
   background-color: #000;
   background-color: rgba(0, 0, 0, 0.7);
 }
-/*csslint ids: false*/
 
 #map {
   width: 100%;
@@ -34,19 +33,18 @@ div[controlPanel] .card {
 #map .container {
   max-width: none;
 }
-/*csslint ids: true*/
-/* label color */
 
+/* label color */
 .input-field label {
   color: orange;
 }
-/* label focus color */
 
+/* label focus color */
 .input-field input[type=text]:focus + label {
   color: orange;
 }
-/* label underline focus color */
 
+/* label underline focus color */
 .input-field input[type=text]:focus {
   border-bottom: 1px solid orange;
   box-shadow: 0 1px 0 0 orange;

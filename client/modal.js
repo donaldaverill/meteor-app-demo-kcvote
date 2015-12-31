@@ -1,12 +1,11 @@
-'use strict';
 Template.modal.helpers({
-  addresses: function () {
+  addresses() {
     return EsriMap.addresses.get();
   }
 });
 
 Template.modal.events({
-  'click button': function (event, template) {
+  'click button'(event, template) {
     EsriMap.setMapToAddress(this);
     $('[data-modal]').closeModal();
   }

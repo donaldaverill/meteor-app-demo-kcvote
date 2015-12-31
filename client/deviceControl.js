@@ -1,30 +1,28 @@
-'use strict';
-Template.deviceControl.onCreated(function () {
-  this.autorun(function () {
+Template.deviceControl.onCreated(function() {
+  this.autorun(() => {
     if (useDevice() && geoReady()) {
-      EsriMap.runPointInfo(new EsriMap.Point(
-        geoLocation().lng,
-        geoLocation().lat));
+      EsriMap.runPointInfo(
+        new EsriMap.Point(geoLocation().lng, geoLocation().lat)
+      );
     }
   });
 });
 
 Template.deviceControl.events({
-  'click [data-action=choose-device-location]': function (event, template) {
+  'click [data-action=choose-device-location]'(event, template) {
     EsriMap.deviceOrAddress.set('device');
   }
 });
 
-var useDevice = function () {
+const useDevice = () => {
   return EsriMap.deviceOrAddress.get() === 'device';
 };
 
-var geoReady = function () {
+const geoReady = () => {
   return Geolocation.latLng();
 };
 
-var geoLocation = function () {
-  // return 0, 0 if the location isn't ready
+const geoLocation = () => {
   return Geolocation.latLng() || {
     lat: 99999,
     lng: 99999
@@ -36,8 +34,7 @@ Template.deviceControl.helpers({
   geoReady: geoReady,
   geoLocation: geoLocation,
   geoError: Geolocation.error,
-  isSelected: function () {
-    return EsriMap.deviceOrAddress.get() === 'device' ? 'orange' :
-      'grey';
+  isSelected() {
+    return EsriMap.deviceOrAddress.get() === 'device' ? 'orange' : 'grey';
   }
 });

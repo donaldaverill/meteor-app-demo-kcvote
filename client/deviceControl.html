@@ -1,16 +1,16 @@
 <template name="deviceControl">
-  <span class="card-title">Select Your Location : </span>
-  <div>
-    <button data-action='choose-device-location' class='btn waves-effect waves-light {{isSelected}}'>
-      Use My Device
-    </button>
-    {{#if useDevice}}
-      {{#if geoReady}}
-        Good Job! You are located at :
-        <br> Latitude : {{geoLocation.lat}} Longitude : {{geoLocation.lng}}
-      {{else}}
-        Waiting for your location information....
-      {{/if}}
-    {{/if}}
-  </div>
+	<span class="card-title">Select Your Location : </span>
+	<div>
+		<button data-action='choose-device-location' class='btn waves-effect waves-light {{isSelected}}'>
+			Use My Device
+		</button>
+		{{#if useDevice}}
+			{{#if geoReady}}
+				Good Job! You are located at :
+				<br> Latitude : {{geoLocation.lat}} Longitude : {{geoLocation.lng}}
+			{{else}}
+				Waiting for your location information....
+			{{/if}}
+		{{/if}}
+	</div>
 </template>
